@@ -1,0 +1,25 @@
+<%= form_for(@tbl_job) do |f| %>
+  <% if @tbl_job.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tbl_job.errors.count, "error") %> prohibited this tbl_job from being saved:</h2>
+
+      <ul>
+      <% @tbl_job.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :url %><br>
+    <%= f.text_field :url %>
+  </div>
+<!--  <div class="field">
+    <%= f.label :html %><br>
+    <%= f.text_area :html %>
+  </div> -->
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

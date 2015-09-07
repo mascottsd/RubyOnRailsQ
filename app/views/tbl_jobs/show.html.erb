@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Url:  <%= @tbl_job.url %></strong>
+</p>
+
+<p>
+  <strong>Html:</strong>
+    <%= @tbl_job.html ? ('COMPLETE: '+ @tbl_job.html) : 'Still waiting...' %>
+</p>
+
+<%= link_to 'Edit', edit_tbl_job_path(@tbl_job) %> |
+<%= link_to 'Back', tbl_jobs_path %>
